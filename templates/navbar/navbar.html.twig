@@ -1,0 +1,23 @@
+<div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="{{ path('home_page') }}">Home</a>
+        </li>
+        {% if is_granted('ROLE_USER') is same as(true) %}
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ path('profil') }}">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ path('composter') }}">Composteur</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ path('logout') }}">Déconnexion</a>
+            </li>
+        {% endif %}
+        {% if is_granted('ROLE_USER') is same as(false) %}
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ path('login') }}">Connexion</a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
