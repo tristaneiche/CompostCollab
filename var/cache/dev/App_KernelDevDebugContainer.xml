@@ -5860,7 +5860,7 @@
     </service>
     <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
       <call method="add">
-        <argument type="service" id=".security.request_matcher.28NqKnb"/>
+        <argument type="service" id=".security.request_matcher.kSUvoDI"/>
         <argument type="collection">
           <argument>ROLE_ADMIN</argument>
         </argument>
@@ -6415,12 +6415,12 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.obhk0jm" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/admin</argument>
+    <service id=".security.request_matcher.BYy8ms8" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/composter</argument>
     </service>
-    <service id=".security.request_matcher.28NqKnb" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.kSUvoDI" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.obhk0jm"/>
+        <argument type="service" id=".security.request_matcher.BYy8ms8"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">

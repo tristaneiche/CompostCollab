@@ -19,5 +19,10 @@
                 <a class="nav-link active" href="{{ path('login') }}">Connexion</a>
             </li>
         {% endif %}
+        
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <p><b>{{ app.user.email }}</b></p>
+        {% endif %}
+        
     </ul>
 </div>
