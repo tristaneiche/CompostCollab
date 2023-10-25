@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RegisterController!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper login-container">
+    <h1 class="login-title">S'inscrire ✅</h1>
+
+    {{ form_start(form) }}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <label for="name">Nom d'utilisateur:</label>
+        {{ form_widget(form.name, { 'attr': {'class': 'login-input' }}) }}
+        <label for="lastname">Prénom:</label>
+        {{ form_widget(form.lastname, { 'attr': {'class': 'login-input' }}) }}
+        <label for="email">Email:</label>
+        {{ form_widget(form.email, { 'attr': {'class': 'login-input' }}) }}
+        <label for="password">Mot de passe:</label>
+        {{ form_widget(form.password, { 'attr': {'class': 'login-input' }}) }}
+
+        <br/>
+        <br/>
+        <br/>
+        {{ form_row(form.submit, { 'attr': {'class': 'login-button' }}) }}
+    {{ form_end(form) }}
+    {{ include('/layout/footer_form.html.twig') }}
+</div>
+{% endblock %}
+
+{% block sidebar %}
+    {{ include('/layout/pub.html.twig') }}
+{% endblock %}
