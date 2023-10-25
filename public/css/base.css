@@ -51,3 +51,7 @@ body {
     height: 70vh;
     width: 100vh;
 }
+
+.navbar-nav {
+    padding-left: 50px;
+}
