@@ -46,3 +46,8 @@ body {
 .advertisement img {
     width: 40%;
 }
+
+.maps {
+    height: 70vh;
+    width: 100vh;
+}
