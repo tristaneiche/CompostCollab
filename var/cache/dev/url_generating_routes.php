@@ -21,4 +21,5 @@ return [
     'login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'profil' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/profil']], [], [], []],
+    'register' => [[], ['_controller' => 'App\\Controller\\RegisterController::new'], [], [['text', '/register']], [], [], []],
 ];
