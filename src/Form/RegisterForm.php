@@ -30,7 +30,7 @@ class RegisterForm extends AbstractType
                 PasswordType::class
             )
             ->add(
-                'save', 
+                'submit', 
                 SubmitType::class
             )
             
