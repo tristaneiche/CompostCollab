@@ -31,6 +31,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
             'stylesheets' => [$this, 'block_stylesheets'],
             'javascripts' => [$this, 'block_javascripts'],
             'body' => [$this, 'block_body'],
+            'sidebar' => [$this, 'block_sidebar'],
         ];
     }
 
@@ -87,10 +88,12 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         // line 23
         echo "                </div>
             </div>
-            ";
-        // line 25
-        echo twig_include($this->env, $context, "/layout/pub.html.twig");
-        echo "
+            <div id=\"sidebar\">
+                ";
+        // line 26
+        $this->displayBlock('sidebar', $context, $blocks);
+        // line 27
+        echo "            </div>
         </div>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
@@ -183,6 +186,24 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     }
 
+    // line 26
+    public function block_sidebar($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sidebar"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sidebar"));
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "base.html.twig";
@@ -195,7 +216,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  169 => 22,  159 => 15,  149 => 14,  139 => 12,  129 => 11,  110 => 6,  92 => 25,  88 => 23,  86 => 22,  79 => 18,  75 => 16,  73 => 14,  70 => 13,  68 => 11,  64 => 10,  60 => 9,  54 => 6,  47 => 1,);
+        return array (  190 => 26,  172 => 22,  162 => 15,  152 => 14,  142 => 12,  132 => 11,  113 => 6,  96 => 27,  94 => 26,  89 => 23,  87 => 22,  80 => 18,  76 => 16,  74 => 14,  71 => 13,  69 => 11,  65 => 10,  61 => 9,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -224,7 +245,9 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
                     {% block body %}{% endblock %}
                 </div>
             </div>
-            {{ include('/layout/pub.html.twig') }}
+            <div id=\"sidebar\">
+                {% block sidebar %}{% endblock %}
+            </div>
         </div>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>

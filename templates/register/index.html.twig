@@ -3,11 +3,6 @@
 {% block title %}Hello RegisterController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
 <div class="example-wrapper login-container">
     <h1 class="login-title">S'inscrire ✅</h1>
 
@@ -30,4 +25,8 @@
     {{ form_end(form) }}
     {{ include('/layout/footer_form.html.twig') }}
 </div>
+{% endblock %}
+
+{% block sidebar %}
+    {{ include('/layout/pub.html.twig') }}
 {% endblock %}
